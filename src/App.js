@@ -5,9 +5,9 @@ import './App.css';
 const MOVIE_API_URL = "https://www.omdbapi.com/?s=man&apikey=4a3b711b";
 
 function App() {
-  const [loading, setLoading] = useState(true);
-  const [movies, setMovies] = useState([]);
-  const [errorMessage, setErrorMessage] = useState(null);
+  const [loading, setLoading] = useState(true); //読み込みの状態を処理//
+  const [movies, setMovies] = useState([]); //サーバーから取得した映画の処理//
+  const [errorMessage, setErrorMessage] = useState(null); //APIリクエストのエラー状態を処理//
 
   useEffect(() => {
     fetch(MOVIE_API_URL)
